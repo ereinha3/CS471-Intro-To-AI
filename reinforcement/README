@@ -1,0 +1,29 @@
+In this project, I implemented value iteration and Q-learning. I tested my agents first on Gridworld, then applied them to a simulated robot controller (Crawler) and Pacman.
+
+For the following, the commands show execution of my implementation.
+
+Part 1: Value Iteration
+python autograder.py -q q1
+python gridworld.py -a value -i 100 -k 10
+
+Part 2: Policies
+python gridworld.py -g DiscountGrid -a value --discount [YOUR_DISCOUNT] --noise [YOUR_NOISE] --livingReward [YOUR_LIVING_REWARD]
+python autograder.py -q q2
+
+Part 3: Q-Learning
+python gridworld.py -a q -k 5 -m
+python autograder.py -q q3
+
+Part 4: Epsilon Greedy
+python gridworld.py -a q -k 100 --noise 0.0 -e 0.1
+python autograder.py -q q4
+python crawler.py
+
+Part 5: Q-Learning and Pacman
+python pacman.py -p PacmanQAgent -x 2000 -n 2010 -l smallGrid 
+python autograder.py -q q5
+
+Part 6: Approximate Q-Learning
+python pacman.py -p ApproximateQAgent -x 2000 -n 2010 -l smallGrid 
+python autograder.py -q q6
+
